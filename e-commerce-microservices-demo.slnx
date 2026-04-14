@@ -1,1 +1,3 @@
-<Solution />
+<Solution>
+  <Project Path="eCommerceSharedLibary/eCommerce.SharedLibary.csproj" />
+</Solution>
