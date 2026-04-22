@@ -70,7 +70,7 @@ namespace OrderApi.Frame.Repository
                 LogException.LogExceptions(ex);
 
                 //Desplay Scary-free message to client
-                throw new Exception("Error occured while retriving order");
+                throw new Exception("Error occurred while retriving order");
             }
         }
 
@@ -78,8 +78,8 @@ namespace OrderApi.Frame.Repository
         {
             try
             {
-                var orders= await context.Orders!.FindAsync(id);
-                return order is not null ? order : null!;
+                var orders = await context.Orders.AsNoTracking().ToListAsync();
+                return orders is not null ? orders : null!;
 
             }
             catch (Exception ex)
@@ -88,7 +88,7 @@ namespace OrderApi.Frame.Repository
                 LogException.LogExceptions(ex);
 
                 //Desplay Scary-free message to client
-                throw new Exception("Error occured while retriving order");
+                throw new Exception("Error occurred while retriving order");
             }
         }
 
@@ -126,9 +126,28 @@ namespace OrderApi.Frame.Repository
             }
         }
 
-        public Task<Response> UpdateAsync(Order entity)
+        public async Task<Response> UpdateAsync(Order entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var order = await FindByIdAsync(entity.Id);
+                if (order is null)
+                    return new Response(false, $"Order not found");
+                context.Entry(order).State = EntityState.Detached;
+                context.Orders.Update(entity);
+                await context.SaveChangesAsync();
+                return new Response(true, "Order Updated");
+            }
+            catch (Exception ex)
+            {
+                //Log Original Exception
+                LogException.LogExceptions(ex);
+
+                //Desplay Scary-free message to client
+                throw new Exception("Error occured while updating order");
+            }
+
+
         }
     }
 }
