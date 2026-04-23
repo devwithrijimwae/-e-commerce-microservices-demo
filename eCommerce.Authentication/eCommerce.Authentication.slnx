@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="../eCommerce.SharedLibary/eCommerce.SharedLibary/eCommerce.SharedLibary.csproj" />
+  <Project Path="AuthenticationApi.Application/AuthenticationApi.Application.csproj" Id="6cd42523-4451-4da1-a23d-c2589519e99e" />
+  <Project Path="AuthenticationApi.Domain/AuthenticationApi.Domain.csproj" Id="3ca196d4-eda6-498b-a39c-8f292a10dc8e" />
+  <Project Path="AuthenticationApi.Frame/AuthenticationApi.Frame.csproj" Id="5aa46210-61a3-49ef-b171-f5a25da72c1a" />
+  <Project Path="AuthenticationApi.Presentation/AuthenticationApi.Presentation.csproj" Id="6501e2a9-bb33-4062-a971-ad056ad80f41" />
+</Solution>
