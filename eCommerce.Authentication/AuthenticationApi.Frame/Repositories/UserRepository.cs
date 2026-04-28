@@ -12,7 +12,7 @@ using System.Text;
 
 namespace AuthenticationApi.Infrastructure.Repositories
 {
-    internal class UserRepository(AuthenticationDbContext context, IConfiguration config) : IUser
+   public class UserRepository(AuthenticationDbContext context, IConfiguration config) : IUser
     {
         private async Task<AppUser> GetUserByEmail(string email)
         {
@@ -76,7 +76,7 @@ namespace AuthenticationApi.Infrastructure.Repositories
         public async Task<Response> Register(AppUserDTO appUserDTO)
         {
             var getUser = await GetUserByEmail(appUserDTO.Email);
-            if (getUser != null)
+            if (getUser is not null)
                 return new Response(false, $"You cannot use this email for registration");
 
             var result = context.Users.Add(new AppUser()

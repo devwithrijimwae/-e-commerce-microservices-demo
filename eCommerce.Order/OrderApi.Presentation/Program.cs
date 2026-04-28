@@ -1,5 +1,4 @@
 using OrderApi.Application.DependencyInjection;
-using OrderApi.Frame.DependencyInJection;
 var builder = WebApplication.CreateBuilder(args);
 
 

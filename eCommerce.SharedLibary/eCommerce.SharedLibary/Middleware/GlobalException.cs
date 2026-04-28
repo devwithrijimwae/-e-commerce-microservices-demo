@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
-using System.Linq;
 using System.Net;
 using Microsoft.AspNetCore.Http;
-using eCommerceSharedLibary.Logs;
+using eCommerce.SharedLibary.Logs;
 
 namespace eCommerce.SharedLibary.Middleware
 {

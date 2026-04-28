@@ -124,7 +124,7 @@ namespace ProductApi.Frame.Repositories
     }
 }
 
-public async Task<Response> Update(Product entity)
+public async Task<Response> UpdateAsync(Product entity)
         {
             try
             {

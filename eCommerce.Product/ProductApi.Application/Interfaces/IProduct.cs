@@ -10,6 +10,6 @@ namespace ProductApi.Application.Interfaces
 {
     public interface IProduct : IGenericIterface<Product>
     {
-        Task<object?> UpdateAsync(Product getEntity);
+        
     }
 }

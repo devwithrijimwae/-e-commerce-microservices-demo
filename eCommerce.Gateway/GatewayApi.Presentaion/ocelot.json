@@ -146,7 +146,7 @@
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:5003",
     "RateLimitOptions": {
-      "QuotaExceededMessage": "Overwhelming requests detected. Calm down boss."
+      "QuotaExceededMessage": "Overwhelming requests detected. REST"
     }
   }
 }

@@ -4,12 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using OrderApi.Application.Interfaces;
 using OrderApi.Domain.Entities;
 using OrderApi.Frame.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrderApi.Frame.Repository
 {
@@ -144,7 +139,7 @@ namespace OrderApi.Frame.Repository
                 LogException.LogExceptions(ex);
 
                 //Desplay Scary-free message to client
-                throw new Exception("Error occured while updating order");
+                throw new Exception("Error occured while updating order",ex);
             }
 
 
