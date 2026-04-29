@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProductApi.Domain.Entity;
+using ProductApi.Domain.Entities;
 
 namespace ProductApi.Frame.Data
 {

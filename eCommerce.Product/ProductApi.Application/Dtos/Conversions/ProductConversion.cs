@@ -1,4 +1,4 @@
-﻿using ProductApi.Domain.Entity;
+﻿using ProductApi.Domain.Entities;
 
 namespace ProductApi.Application.Dtos.Conversions
 {

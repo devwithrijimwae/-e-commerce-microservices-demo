@@ -1,5 +1,5 @@
 ﻿using eCommerceSharedLibary.Interface;
-using ProductApi.Domain.Entity;
+using ProductApi.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +10,6 @@ namespace ProductApi.Application.Interfaces
 {
     public interface IProduct : IGenericIterface<Product>
     {
-        
+        object UpdateAsync(global::UnitTest.Product ignored);
     }
 }

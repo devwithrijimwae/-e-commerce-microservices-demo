@@ -2,7 +2,7 @@
 using eCommerce.SharedLibary.Response;
 using Microsoft.EntityFrameworkCore;
 using ProductApi.Application.Interfaces;
-using ProductApi.Domain.Entity;
+using ProductApi.Domain.Entities;
 using ProductApi.Frame.Data;
 using System;
 using System.Linq.Expressions;
